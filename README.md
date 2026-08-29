@@ -17,8 +17,9 @@ Palworld 及其相关名称、商标和游戏内容的权利归其各自权利�
 
 ## 使用
 
-1. 请先完全退出 Palworld后选择或拖入字体，然后点击“应用”即可。
-2. 如需恢复游戏原始字体，退出游戏后点击“还原默认”。
+1. 默认情况下软件会自动检测你的游戏路径，如果没检测到游戏路径点击右上角“🔴未检测到游戏”添加游戏路径。
+2. 请先完全退出 Palworld后选择或拖入字体，然后点击“应用”即可。
+3. 如需恢复游戏原始字体，退出游戏后点击“还原默认”。
 
 ## 效果预览图
 <img width="450" height="600" alt="c9193b38983e66744f566e718545adc6" src="https://github.com/user-attachments/assets/d68b27a4-5890-44d1-b93f-85841225da0c" /><img width="520" height="600" alt="image" src="https://github.com/user-attachments/assets/9cbeb011-f43b-4016-902c-31a61fc2ce11" />
