@@ -1,0 +1,9 @@
+node_modules/
+.build/
+dist/
+
+*.log
+.DS_Store
+Thumbs.db
+
+resources/template/Pal/Content/Pal/Font/

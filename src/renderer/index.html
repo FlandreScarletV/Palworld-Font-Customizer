@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:">
+  <title>Palworld Font Customizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main id="dropZone" class="app-container">
+    <header class="header-area">
+      <h1>Palworld Font Customizer</h1>
+      <span>By FlandreScarletV</span>
+    </header>
+    <section class="card">
+      <div class="preview-section">
+        <div class="preview-group">
+          <div class="preview-header"><label>中文预览</label><button id="gameStatus" class="game-status"
+              type="button">正在检测游戏…</button></div>
+          <div class="preview-box">幻兽帕鲁 字体替换测试</div>
+        </div>
+        <div class="preview-group"><label>英文预览</label>
+          <div class="preview-box">Palworld Font Customizer</div>
+        </div>
+        <div class="preview-group"><label>符号预览</label>
+          <div class="preview-box">0123456789 !@#$%^&amp;*()_+-=</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>替换你喜欢的字体</label>
+        <button id="fontPicker" class="font-picker" type="button"><span id="fontName">🔤
+            浏览电脑中的字体…</span><span>›</span></button>
+        <div class="drop-hint">也可以把 .ttf / .otf 字体拖到此窗口</div>
+      </div>
+
+
+      <div id="weightControl" class="preview-group weight-control" hidden>
+        <div class="weight-label"><label>字重 Weight</label><span id="fontWeightValue">400</span></div>
+        <div class="slider-box">
+          <input type="range" min="100" max="900" step="1" value="400" class="jelly-slider" id="fontWeightSlider">
+        </div>
+      </div>
+
+      <section id="variableSection" class="variable-section" hidden>
+        <div class="variable-title"><span>可变字体参数</span><button id="resetAxes" type="button">恢复默认值</button></div>
+        <div id="axisControls" class="axis-controls"></div>
+      </section>
+      <div id="progress" class="progress" aria-live="polite"></div>
+      <div class="button-group">
+        <button id="restore" class="button tonal" type="button">还原默认</button>
+        <button id="apply" class="button filled" type="button" disabled>应用</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>

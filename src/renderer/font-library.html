@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>选择电脑中的字体</title>
+    <link rel="stylesheet" href="font-library.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>电脑中的字体</h1>
+            <p>双击字体即可用于预览和替换；TTC 暂不支持。</p>
+        </div><input id="search" type="search" placeholder="搜索字体名称…" autocomplete="off">
+    </header>
+    <main>
+        <div id="status">正在读取字体列表…</div>
+        <div id="fontList" class="font-list"></div>
+    </main>
+    <script src="font-library.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+:root {
+    --primary: #0061a4;
+    --surface: #fdfbff;
+    --container: #f0f0f4;
+    --text: #1a1c1e;
+    --muted: #43474e
+}
+
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    margin: 0;
+    padding: 24px 20px 18px;
+    display: flex;
+    justify-content: center
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 4px
+}
+
+.header-area h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0
+}
+
+.header-area span {
+    font-size: 13px;
+    color: var(--muted);
+    transform: translateY(12px);
+}
+
+.card {
+    background: var(--container);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    flex-direction: column;
+    gap: 20px
+}
+
+.card:has(.variable-section:not([hidden])) {
+    gap: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px
+}
+
+.card:has(.variable-section:not([hidden])) .preview-section {
+    gap: 8px
+}
+
+.card:has(.variable-section:not([hidden])) .preview-box {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.preview-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.preview-group,
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline
+}
+
+label,
+.game-status {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted)
+}
+
+.game-status {
+    font-weight: 400;
+    border: 0;
+    background: transparent;
+    padding: 2px 0;
+    cursor: pointer
+}
+
+.game-status.running {
+    color: #286a30
+}
+
+.game-status.stopped {
+    color: #a33
+}
+
+.game-status:hover,
+.game-status:focus-visible {
+    text-decoration: underline;
+    outline: none
+}
+
+.preview-box,
+.font-picker {
+    background: var(--surface);
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--text);
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left
+}
+
+.font-picker {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px
+}
+
+.font-picker:focus-visible {
+    outline: 1px solid var(--primary)
+}
+
+
+
+.drop-hint {
+    font-size: 12px;
+    color: #73777f;
+    text-align: center;
+    padding-top: 2px
+}
+
+.variable-section {
+    background: #fdfbff;
+    border-radius: 7px;
+    padding: 10px 12px;
+    max-height: 128px;
+    overflow-y: auto
+}
+
+.weight-control {
+    margin: 7px 0 3px
+}
+
+.weight-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.weight-label span {
+    color: var(--muted);
+    font-size: 12px
+}
+
+.variable-title,
+.axis-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.variable-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px
+}
+
+.variable-title button {
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    font-size: 11px;
+    cursor: pointer
+}
+
+.axis-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.axis-label {
+    color: var(--muted);
+    font-size: 11px
+}
+
+.axis-control input {
+    width: 100%;
+    accent-color: var(--primary)
+}
+
+.app-container.dragging .card {
+    outline: 2px dashed var(--primary);
+    outline-offset: -8px
+}
+
+.app-container.dragging .drop-hint {
+    color: var(--primary);
+    font-weight: 600
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: auto
+}
+
+.button {
+    border: 0;
+    border-radius: 15px;
+    padding: 0 24px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #0000001a
+}
+
+.filled {
+    background: var(--primary);
+    color: white
+}
+
+.tonal {
+    background: #d7e3f0;
+    color: #101c2b
+}
+
+.button:disabled,
+.font-picker:disabled {
+    background: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none
+}
+
+.progress {
+    min-height: 48px;
+    max-height: 48px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--muted);
+    overflow-wrap: anywhere
+}
+
+.progress.success {
+    color: #286a30
+}
+
+.slider-box {
+    background: var(--surface);
+    border-radius: 5px;
+    padding: 17px 18px;
+    display: flex;
+    align-items: center;
+}
+
+.jelly-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    margin: 0;
+    cursor: pointer;
+}
+
+.jelly-slider:focus {
+    outline: none;
+}
+
+
+.jelly-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 11px;
+    background: linear-gradient(to right, #7e62fd var(--slider-fill, 37.5%), var(--container) var(--slider-fill, 37.5%));
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+
+.jelly-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 22px;
+    width: 14px;
+    background: var(--primary);
+    border-radius: 4px;
+    margin-top: -6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+}
+
+
+.jelly-slider:active::-webkit-slider-thumb {
+    transform: scaleX(1.4) scaleY(0.75);
+    background: #004d80;
+}
+
+
+.jelly-slider::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #fff var(--slider-fill, 37.5%), var(--container) var(--slider-fill, 37.5%));
+    border-radius: 5px;
+}
+
+.jelly-slider::-moz-range-thumb {
+    height: 22px;
+    width: 14px;
+    background: var(--primary);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease;
+}
+
+.jelly-slider:active::-moz-range-thumb {
+    transform: scaleX(1.4) scaleY(0.75);
+    background: #004d80;
+}
