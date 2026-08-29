@@ -1,6 +1,6 @@
 ## 免责声明
 
-Palworld Font Customizer 是一个非官方的第三方工具，与 Pocketpair, Inc. 无隶属、合作、赞助或认可关系。
+Palworld Font Customizer 是一个非官方的第三方工具，与 Pocketpair, Inc. 无隶属、合作、赞助或认可关系。Palworld官方的Mod使用指南[Palworld Mod Usage Guidelines](https://guideline.palworldgame.com/palworld-mod-guideline)
 
 Palworld 及其相关名称、商标和游戏内容的权利归其各自权利人所有。本项目中对 Palworld 的提及仅用于说明软件的兼容对象。
 
