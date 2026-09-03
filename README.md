@@ -3,7 +3,7 @@
 Palworld Font Customizer 是一个非官方的第三方工具，与 Pocketpair, Inc. 无隶属、合作、赞助或认可关系。
 Palworld官方的Mod使用指南见[Palworld Mod Usage Guidelines](https://guideline.palworldgame.com/palworld-mod-guideline)
 
-Palworld 及其相关名称、商标和游戏内容的权利归其各自权利人所有。本项目中对 Palworld 的提及仅用于说明软件的兼容对象。
+Palworld 及其相关名称、商标和游戏内容的权利归其各自权利人所有。
 
 本工具用于生成和安装字体替换 Mod。游戏更新、其他 Mod、字体文件或运行环境的差异可能导致 Mod 失效、显示异常或其他兼容性问题。使用本工具及其生成内容所产生的风险由使用者自行承担。
 
@@ -11,7 +11,7 @@ Palworld 及其相关名称、商标和游戏内容的权利归其各自权利�
 
 用户应自行确认所选择字体的许可证是否允许复制、处理、修改、转换以及用于生成 Mod。本项目不会授予用户任何第三方字体的额外使用。
 
-第三方组件及许可证见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+第三方组件及许可证见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
 
 ## 使用
 
